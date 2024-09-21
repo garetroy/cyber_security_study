@@ -11,7 +11,7 @@ There are two major study sources where the directory structures will be the sam
   - https://www.amazon.com/CompTIA-Security-Certification-Kit-SY0-701/dp/1394211449
 
 - **Chapter [Number]**
-  - **Section [Number]**
+  - **Section [Number]** (Study guide will not have sections)
     - **Summary Notes**: Condensed summaries of the section content.
     - **Typed/Rewritten Notes**: Rewritten notes to reinforce learning before starting the next section.
     - **Section Practice Quiz**: If applicable, practice quizzes.
