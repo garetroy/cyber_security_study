@@ -1,0 +1,85 @@
+# CIA Triad
+ - Cyber security has three key objectives called the CIA triad.
+ - Confidentiality - Ensures unauthorized individuals are unable to gain access to sensitive information
+ - Integrity - No unauthorized modificaitons to the data; intentionally or unintentionally.
+ - Availablility - Ensures information and systems are read to meet the needs of the users @ request time. 
+ - Nonrepudations - Ability to confirm the actions of an individual (e.g. they are unable to say they never sent a message)
+   - This is not apart of CIA but closely related to.
+
+# Data Breach Risks
+ - Security incedents when the customer experiences a problem in any of the CIA Triad axises.
+ - Can be by attackers or by incidentals such as losing a device or an earthquake destorying data centrs.
+
+# DAD Triad
+ - The tree threats to cyber security, which are related to the CIA triad.
+ - Disclosure - Exposure of sensitive information; aka Data Loss. 
+   - Violation of Confidentiality axis.
+   - Data Exfiltration - Attacker gains information and removes it from the source.
+ - Alteration - Modification of information.
+   - Violation of the Integrity axis.
+ - Denial - Disruption of access to data.
+   - Violates the Availability axis.
+
+# Breach Impact
+ - Risk analysis that allows us to identify the potential or actual impact of an event.
+ - Finanical Risk, which can include direct (lost of laptop) or indirect (the ideas that existed on the laptop are not recoverable).
+ - Reputational Risk
+ - Stratigic Risk - Prevents the customer from reaching important strategic goals (x$ by Q2).
+ - Operational Risk - Ability to carry out daya to day function (less serious than Stratigic).
+ - Compliance Risk - Legal or policy rammifications.
+
+# Security Controls
+ - Control Objectives - Statments that define the state of security that is desired.
+ - Security Controls - The actual mechanisims employed to attain Control Objectives.
+ - Gap Analysis - Review done to identify the descrepency between the Control Objectives and the current (or planned) Security Controls in place.
+
+## Securiy Control Categories
+ - Technical - Digital controls, software or hardware.
+   - Firewalls
+   - ACL's
+   - Encryption
+ - Operational - People as a means of control.
+   - User Access Reviews
+   - Persons Log Monitoring
+   - Security Gaurds
+ - Managerial - Mechanisms of the Risk Management process.
+   - Security Planning Exercises
+   - Security Reviews
+   - Alteration of (execution of) Control Objectives
+ - Physical 
+   - Fences
+   - Locks
+   - Lighting
+
+## Security Control Types
+ - Preventative - Stopping before the event occurs.
+   - Firewalls
+ - Deterent - Makes the event less likley.
+   - Dogs
+ - Detective - Identify events that already happened.
+   - Logs/Alerts
+ - Corrective - Remediation of problems
+   - Restoring Backups
+ - Compensative - Mitigation of Problem.
+   - Blocking an upgrade
+ - Directive - Informative actions taken by others.
+   - Rules for opening emails
+
+# Data Protection
+ - There are three states of data
+   - Data at Rest - Storage phase of data (HDDs)
+   - Data in Transit - Data that exists within communication (networking) 
+   - Data in use - Data that exists within the system (RAM)
+ - Data Loss Prevention (DLP) - Systems that help orginize around prevention such as searching for unsecured data or attempts to login
+   - Agent Based DLP Environment - Installed Monitoring Software
+   - Agentless " " - Dedicated devices that sit on the network and monitor traffic. 
+   - DLPs might auto encrypt sensitive information it finds
+   - DLPs can use pattern matcing or watermarking (DRM) to identify information.
+
+# Data Minimizaiton
+ - Reducing the amount of sensitive data monitored.
+ - Can take the form of depulication
+ - Data Obfuscation
+   - Hashing (One way transformation)
+   - Tokenizaiton (ID 1818 = Garett)
+   - Masking (password = "*****"

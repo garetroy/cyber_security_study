@@ -1,0 +1,61 @@
+# Security Controls 
+Security Controls can help to prevent, minimize and mitigate negative security events.
+
+## Security Control Categories
+ - Techinical Controls - Software or hardware focused controls.
+   - Operating System Controls
+   - Firewalls
+   - Anti-Virus
+
+ - Managerial Controls - Management or policy focused controls.
+   - Standard Proceedures
+   - Security Policies
+
+ - Operational Controls - People as a means of security controls.
+   - Security Gaurds
+   - Awareness Seminars 
+   - Educational pamphlets
+
+ - Physical Controls - Physical means of controls.
+   - Fences
+   - Badge Readers
+   - Fire Alarms
+
+## Security Control Types
+ - Preventitive - Prevents negative security events.
+   - Access Blocking
+   - Firewall Rule (Techinical)
+   - Security Policy (Managerial)
+   - Security Gaurd Checkpoints (Operational)
+   - Door Locks (Physical)
+
+ - Deterrent - Discourges attackers attempts.
+   - Warning Splash Screen (Techinical)
+   - Thread of Demotion (Managerial)
+   - Front Desk Reception (Operational)
+   - Posted Warning Signs (Physical)
+
+ - Detective - Identification of already attempted attacks.
+   - System Logs or Alerts (Technical)
+   - Login report Reviews (Managerial)
+   - Gaurd Patrols (Operational)
+   - Motion Detectors (Physical)
+
+ - Corrective - Mitgating impact of said attack.
+   - Restore from Backups (Technical)
+   - Create Policies on Reporting issues (Managerial)
+   - Contact Law Enforcement (Operational)
+   - Fire Extinguisher (Physical)
+
+ - Compensating - Alternatives to mitigate or prevnt attacks.
+   - Firewall Blocking an Update (Technical)
+   - Seperation of Duties (Managerial)
+   - Parallel Gaurd Duties (Operational)
+   - Backup Generators (Physical)
+
+ - Directive - Direct subjects towards security compliance.
+   - Weak security control.
+   - Store sensitive files in a specific folder (Techinical)
+   - Compliance Policies or Proceedures (Managerial)
+   - Train Users (Operational)
+   - Post a Sign (Physical)
