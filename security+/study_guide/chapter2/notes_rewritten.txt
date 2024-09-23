@@ -1,0 +1,69 @@
+# Classificaiton of Security Threats
+ - Internal vs External
+ - Level of Sophistication/Capability
+ - Resources / Funding
+ - Intent / Motivation
+
+# Threat Actor
+ - Unskilled - Individuals that are sometimes called "Script Kiddies". 
+   - Has little knowledge of how the exploits work, typically has low resource.
+ - Hacktivists - Individuals or groups that use techniques to achieve their (political) goals. 
+   - Skills levels vary.
+   - Typically low resources (sometimes they have a lot (anon)).
+   - Whistleblowers fall into this category.
+ - Orginized Crime - Groups typically focused on finanical gain.
+   - They like to stay in the shadows.
+   - Typically medium to high skill.
+   - Have high resources.
+ - Nation States - Foreign governments or entities.
+   - Highly skilled.
+   - High resources.
+   - APTs (Advanced persistent threats).
+ - Insiders - Individuals with authorized access to systems.
+   - Any skill with different motivations and resources.
+   - Can be a disgruntled employee.
+ - Competitors - Business v Business
+   - Corprate Espionage
+   - Varies highly in resources and skills.
+
+# Attack Motivations
+ - Data Exfil - Gain sensitive or proprietary information.
+ - Espionage - Gain secret Knowledge.
+ - Service Disruption
+ - Blackmail
+ - Finanical Gain
+ - Philosophical or Political Beliefs
+ - Chaos
+ - War
+
+# Threat Vectors & Attack Surfaces
+ - Attack Surface - System, Service, or Application to exploit.
+   - First step for an attack is identification of the Attack Surface.
+ - Threat Vector - Means that actors use to launch an attack.
+   - Using a Threat Vector on an Attack Surface.
+ - Example Vectors
+   - Message Based (email, im)
+   - Wired Network (on location)
+   - Wireless Network (wifi, bluetooth)
+   - Systems (software, OS)
+   - Files (Malicious Code embeded in images)
+   - Removable Devices (usb)
+   - Cloud (flaws in permission design or leaked passwords)
+   - Supply Chain (tampering at the provider level)
+
+# Threat Data & Intelligence
+ - Threat Intelligence - Set of activites & resources available to cyber security professionals.
+   - Public or Private
+   - Can be used for predictive analysis
+ - Vulnerability Databases - A collection of currently know vulnerabilites.
+ - Indicators of Compromise (IOCs) - Telltale signs an attack has taken place.
+ - Open Source Intelligence - Public Threat Intelligence.
+ - Threat Maps - Geographic views of Threat Intelligence.
+ - Assessing Threat Intel Value
+   - Is it timley?
+   - Is it accurate?
+   - Is it relevant?
+   - Confidence scores is one way of evaluation.
+ - Threat indicator and management is so large, it requires standards.
+   - STIX is the request/response structure
+   - TAXII is the protocol
