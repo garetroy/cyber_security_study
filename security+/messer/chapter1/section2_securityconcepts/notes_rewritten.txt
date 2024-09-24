@@ -1,0 +1,80 @@
+# Security Concepts
+ - CIA Triad (sometimes known as AIC)
+ - Confidentiality - Information only available to the right people
+   - Encryption
+   - ACLs
+   - Two factor authentication
+ - Integrity - Data is stored or transferred as intended
+   - Modification of data is identified
+   - Hashing
+   - Digital Signatures
+   - Certificates
+   - Non-repudation
+ - Availability - Data is accessible to authorized users
+   - Redundancy 
+   - Fault Tolerence
+   - Patching
+ - Non-repudation - Verifiable acitons by actors
+   - e.g. You send an email, but delete the email, the orginization can still identify that you took that action
+ - Proof of Integrity - Verifies that the data did not change
+   - We can use hashing for this
+ - Proof of Origin - Prove the source/author of the message.
+   - Matches individuals signature
+   - SSh keys
+
+## Authentication, Authorization, & Accounting
+ - Identification - Who you claim to be
+ - Authentication - Proving of that identity
+ - Authorization - Based on that authorization, what access is given.
+ - Accounting - Recoring of the activites (who/what/when/where)
+ - Client -> internet -> firewall -> AAA Server -> Firewall -> Data Server
+ - Autherization for a device is typically done by putting a certificate on the device via mgmt software.
+   - Certificate Authority (CA)
+ - Authorization models are how we idnetify permissions 
+   - Typically User/service to data & application access
+
+## Gap Analysis
+ - Helps us to identify the discrepency of current security controls to the desired.
+ - Can be brief or a study done over years.
+ - Create a baseline first
+   - ISO/IEC 27001
+ - Evaluate people
+   - Formal Experience
+   - Current Training
+ - Compare and Contrast
+   - Evaluate the current system
+   - Identify weaknesses
+   - Breakdown into smaller segments
+ - Final Analysis
+ - Suggestions to close gaps
+
+## Zero Trust
+ - Many networks trust individuals that get access to the internal network.
+ - Zero Trust - Nothing is trusted and all is subject to security checks.
+ - Functional Plans - different layers of a network for control
+   - Data Plane
+   - Control Plane (Manages actions, defines policies, how ports are forwarded...etc)
+ - Adaptive Identity - Apply security controls not just on the identity of the individual, but looks at other attributes such as locatoin, type of connection, ... etc)
+ - Threat Score Reduction - Decreasing the possibilities of who is allowed
+ - Policy driven access control - Combinded tyypically with Adaptive Identity
+ - Secuirty Zones - Identifying origin to destination connections (where they are coming from and where they are going)
+   - This allows there to be rules of access between different planes/zones.
+ - Policy Enforcement Point - The point of policy evaluation that traffic first has to go through.
+   - Typically also gains information on the request, but does not decide.
+ - Policy Decision Point - Uses PEP data to make a decision on the requests permission. (Exists within the PEP or in tandem with)
+ - Policy Administrator - With PEP informations, generates access tokens or credintails. 
+
+## Physical Security 
+ - Preventing Access
+ - Baracades
+ - Access Control Vestibule - Think of access to certain areas through hallways... etc
+
+## Deception & Disruption
+ - Honey Pot - Attracts attackers to attack on a mock environment, which typically allows for recon.
+ - Honey Nets - Larger networked Honey Pots
+ - Honey Files - Files that look attractive 
+   - Alerts placed on access of a file.
+ - Honey Token - Traceable data so you can follow the attacker
+   - Api Credentials
+   - Emails
+   - Cookies
