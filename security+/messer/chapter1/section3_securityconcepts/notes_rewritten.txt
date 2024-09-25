@@ -1,0 +1,50 @@
+# Change Management
+ - Identifies how to make a change
+ - One change can lead to massive downstream changes
+
+## Change Control Process
+ - A document that provides details how to introduce changes or implementations.
+ - Typically helps avoid downtime, confusion, or mistakes
+ - Typical Approval Process
+   - Defining Request Forms
+   - Determining the Purpose of the Change
+   - Identifying the scope of the change
+   - Scheduling date and time of the change
+   - Determining what is going to be effected
+   - Analyze the risk associated w/ the change
+   - Get end-user acceptence 
+ - Usually the change come from the owner of the data/application
+   - E.x. shipping labels need to be updated
+ - Stakeholders - Individuals/Departements that are effected or invested in the change.
+ - Impact Analysis - Determining the risk value
+   - Can be mild or far reaching
+   - Fix can break another component
+   - The fix could actually do nothing
+   - Could cause Data Corruption
+   - ... etc
+ - Also important to identify the risk for not updating
+   - Vulnerability
+   - Unexpected Downtime
+   - Application unavailability
+ - Testing
+   - Testing can help with verifying the expected behavior of the change
+   - Sandbox environment can help a lot
+ - Backout Plan - A plan that will identify the best way to rever the changes
+   - Not everything is revertable
+   - Maybe test it within the sandbox environment
+ - Maintence Window - When the change will happen
+   - Typically happens outside peak hours (unless an emergency)
+   - Code freeze
+   - Mitigates the amount of processes/people effected
+
+## Technical Change Management
+ - This is the "how" to make changes
+ - Allow list/deny list
+   - Allow list is more flexible
+ - A change approval isnt permisison to make any change
+ - Though sometmes it is requried to make changes outside of the change, so long as the change is documented (and the scope of this is sometimes defined within CCP)
+ - Downtime Announcments
+ - May require restarts of services/computers/servers
+ - Legacy applications may be a bit more complicated and have their own nuaunces (including CCP)
+ - Sometimes requires updating multiple services/systems
+ - Documentation is important
