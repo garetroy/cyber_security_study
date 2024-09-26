@@ -1,0 +1,45 @@
+# Human Vectors
+ - Social Engineering - Exploiting vulnerablilites through human centric means.
+ - Common Principals of Social Engineering: 
+   - Authority
+   - Intimidation
+   - Consensus - Convincing others by the actions of the majority.
+   - Scarcity
+   - Familiarity & Trust
+   - Urgency
+ - These principals are typically deployed in parallel.
+ - Technical means of Social Engineering
+   - Phishing
+     - Spear Phising (Specific target focused)
+     - Whaling (Specific High Profile Target)
+     - Vishing (Voice)
+     - Smisshing (Texting)
+     - Typically prevented through awareness
+ - Misinformation/Disinformation
+   - Online Influences
+   - e.x. us election interference
+   - MDM (Misinformation, disinformation, malinformation)
+ - CISA "Trust"
+   - Tell your story
+   - Relay to your team
+   - Understand and acess MDM
+   - Strategize Response
+   - Track Outcomes
+   - Trusted sources are hard to find
+ - Impersination
+ - Business Email Compromises (BEC)
+   - Spoofing or using compromised business emails.
+   - Invoice Scams
+   - Data Theft
+ - Pretexting - Using made up scenarios
+ - Watering Hole Attacks - Using websites a target frequently uses
+ - Brand Impersination
+ - Typo Squatting - Slightly altered urls that rely on mistyped or un-observert targets
+   - Pharming - Similar, but system focused.
+
+# Password Attacks
+ - Brute Force Attacks - Iteration thorugh different combinations of passwords until they find on that works.
+   - Password Spraying Attacks - Variation that focuses on a smaller set of passwords on a larger group of targets
+   - Dicitonary Attacks - Predefined set of passwords to try 
+   - Rainbow Tables - Same as Dictionary Attacks, but using hashes instead. 
+ - Some systems password attack themselves with easy passwords to see if they can break in. 
