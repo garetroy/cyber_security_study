@@ -1,0 +1,118 @@
+# Cryptographic Solutions
+ - Public Key Infrastructures (PKI) - Policies, proceedures, hardware and software that help create, distribute, manager, store, or revoke digital certificates
+   - Involved with key creation
+ - Symmetic Encryption - Single shared key for both encryption or decryption
+   - Shared Secret
+   - Doesn't Scale Well
+   - Faster and less overhead
+   - Think of a key for a door
+ - Asymmetric Encryption - Two or more keys for decryption and encryption
+   - Typicaly has a private key (not shared with anyone but the owner) and a public key (given away to anyone)
+   - Private key is the only one that can decrypt that which is encrypted with the public key
+   - Both private and Public Key created at the same time
+ - key Escrow
+   - Someone who holds or manages the keys
+   - Allows orgs to access the encrypted data
+
+## Encrypting Data
+ - Protecting data on storage devices
+   - Can be the entire system or an individual file
+ - Database Encryption
+   - Transparent Encryption - Encrypt with a symmetric key
+   - Record Level Encryption - Encrypt individual columns w/ seperate symmetric keys for each column
+ - Transport Encryption - Protect data traversing the network
+   - HTTPS 
+   - VPN
+ - Encryption Algorithms
+   - Differences are 
+     - Speed
+     - Security
+     - Complexity
+   - DES
+   - AES 
+   - SHA256
+
+## Keys
+ - Key Lengths
+   - Larger is safer
+   - Key Stretching - Re-encrypting encrypted data multiple times (for added layers)
+ - Key Exchange 
+   - How do you share the key without physical mediums?
+   - Out-of-band - Sending the key by means of Telephone, Courier (non network)
+   - In-band - Sending the key on network (typically using asymmetric encryption for sending symmetric keys)
+ - Public Key Cyrptography
+   - Keys are exchanged assymetrically by 
+     - Person A combines their Private key with Person B's Public Key
+     - Person B combines their Private key with Person A's Public Key
+     - These produce the same result and allows them to have a shared key that is secure
+
+## Encryption Technologies
+ - Trusted Platform Module (TPM)
+   - Cryptographic Hardware
+   - Unique keys are burned in during manuf
+   - Only connected to a single  device
+ - Hardware Security Module (HSM)
+   - Similar to TPM, but a scaled up version
+   - For large environments
+ - Key Management System
+   - Software based
+   - Can have auto key rotation
+ - Secure Enclave - A protected area for our secrets focused only on secrets
+   - Seperate from the CPU
+   - Has its own boot ROM
+   - Monitors system for alteration of boot process
+   - True Random Number Generator
+   - Handles Root keys
+   - Real time memory encryption
+ 
+## Obfuscation
+ - Taking data nad making it harder to understand
+ - Hides in plain sight
+ - Easy to reverse engineer
+ - Stegonography - Seucirty through obscurity
+   - Message is invisible to "the naked eye"
+   - Can be embeded in images, network communicaiton, files .. etc
+   - Watermarks
+ - Tokenization - Sensitive data replaced with a place holder (hashing)
+ - Data masing - Hide part of the string (###-##-####)
+
+## Hashing and Digital Signatures
+ - Hashes - Represents data as a short string
+   - One way function
+   - Used for Verification
+   - SHA256
+ - Collision - When two different inputs create the same hash
+ - Used to verify downloads
+ - Used for password storage
+ - Salt - Random info we add to the password before hashing
+   - Everyone gets their own salt
+   - Prevents rainbow tables
+ - Digital Signature - Proves integrity and source (non-repudiation)
+   - Creation is as follows:
+     - Plaintext -> hash -> Person A applys private key to this hash -> Sends the plaintext and created encrypted hash
+   - Verification is as follows:
+     - Plaintext and Encrypted hash recieved -> Take encrypted hash and decrypt with Person A's public key -> Hash Plaintext using the same algo -> If they hashes are the same, then you can verify the data is right and that Person A sent the data.
+
+## Blockchain
+ - Verifiable decenteralized public ledger
+
+## Certificates
+ - Binds a public key with an identity
+ - Contains other data / Details
+ - Certificate Authorities combined with Certificates adds additional trust
+ - X.509 is a standard
+   - Serial Number
+   - Version
+   - Algo used
+   - Name of holder
+   - Public Key
+   - ...
+ - Allows us to verify with a trusted source
+ - "Root of trust" - inherently trusted component/person (CA)
+ - CA's are built into browsers and OS's
+ - Verification typically happens at the CA level, if they approve, the CA signs the certificate with their private key
+ - Wild Card Certificate - Used for a domain (e.g. google.com/*)
+ - Key Revocation - Revoking that the certificate/key is trusted
+ - OSP Stapling 
+   - An online certificate status protocol that allows for easy revokation of certificates
+
