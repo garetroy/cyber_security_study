@@ -15,6 +15,7 @@ There are two major study sources where the directory structures will be the sam
     - **Summary Notes**: Condensed summaries of the section content.
     - **Typed/Rewritten Notes**: Rewritten notes to reinforce learning before starting the next section.
   - **Chapter Summary Notes**: Comprehensive summaries compiled after completing all sections in the chapter.
-  .
+
+- **Practice Quizes**: Quizes I took to test my knowledge
   
 - **Practical Exercises**: Hands-on exercises to apply the concepts learned.
