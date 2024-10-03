@@ -1,0 +1,90 @@
+# Threat Actors
+## Threat Actors
+ - Entity responsible for an attack
+ - Useful to identify attack attributes & motivation
+ - Actor Considertaions:
+   - Internal/External
+   - Resoures/Funding
+   - Level of Sophistication and Capability
+ - Motivations
+   - Exciltration
+   - Spying
+   - Blackmail
+   - Chaos
+   - Politcal
+   - Financial 
+   - Revenge
+   - War
+ - Actor Types
+  - Nation State 
+    - External
+    - Motivation: Exfil, Political, Revenge, Disruption, War
+    - High Resources
+    - High Sophistication
+  - Unskilled
+    - External
+    - Motivaiton: Disruption, Exfil, Political
+    - Low Resources
+    - Low Sophistication
+  - Insider
+    - Internal
+    - Mot: Revenge/Financial
+    - Medium Sophistication
+    - Equal Resources? 
+  - Hacktivist
+    - External (rarley Internal)
+    - Mot: Political
+    - Medium Sophistication? (Can vary)
+    - Low Resources
+  - Organized Crime
+    - External 
+    - Mot: Financial
+    - High Sophistication
+    - High Resources
+  - Shadow IT 
+    - Internal
+    - Mot: Revenge/Political
+    - Medium Sophistication? (Can vary)
+    - Equal Resources
+
+## Common Threat Vectors
+ - A method used by the attacker
+ - Message Based (Email/IM/SMS)
+ - Phishing Attacks 
+ - Media-Based Vectors
+ - File Based
+ - Removable Devices
+ - Vulnerable Software
+ - Legacy/Unsupported systems
+ - Unsecured networks
+ - Open Service Ports
+ - Default Configs
+ - Supply Chain 
+
+## Phishing
+ - Social engineering to try to make something malicious look innocent
+ - Business Email Compromise
+   - Spoofed Domain
+   - Emails that look legit
+ - Typo Squatting - Sitting on mispelled url domains
+ - Pretexting - Lying to get information (creating stories)
+ - Vishing (Voice Phishing)
+ - Smishin (SMS Phishing)
+
+## Impersonation
+ - Setting a trap with impersonation
+ - Typically attacker does reconnaissance to fool individuals
+ - Techincial detail overload to misdirect attention
+ - Typically trying to elicit informaiton
+ - Idenity Fruad - Pretending to be a person to gain access (Opening a credit card account)
+
+## Watering Hole Attacks
+ - Posining commanly accessed surfaces
+ - Reuqires knowledge of what employees access
+ - Indirect attacks gain access (Coffee shop web hacked -> employees use and track it back to their company)
+
+## Other Social Engineering Tactics
+- Misinformation
+  - Distribute False information
+  - Influence campeigns
+- Brand Impersonation
