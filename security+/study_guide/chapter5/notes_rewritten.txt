@@ -1,0 +1,203 @@
+# Assesment & Testing
+
+## Vulnerability Management
+ - Used to identify, prioritize, and remediate vulnerabilities.
+ - Vulnerability scanning is an example of this
+ - Identify scan targets
+   - Sometimes scan everything
+   - Other times be selective based on
+     - What data is processed/stored/transmitted
+     - What networks the systems are exposed to
+     - Deployment Environment
+     - Org $
+ - Determining Scan Frequency
+   - Automated scanning can help take the burden off of admins
+   - Provide alerting
+   - Factors to consider on frequency
+     - Risk Appetitie
+     - Regulatory Requirements
+     - Technical Constraints 
+     - Bussiness Constraints
+     - Licesning Constraints
+ - Configurting Scans
+   - Scan Sensitivity
+   - Plug-ins 
+ - Network Scans
+   - Remote scans might be incomplete b/c of firewalls and other network factors
+   - Could cause false positives
+   - Sometimes you can configure the network scans with additional credentials to prevent this problem (Credential Scanning)
+   - Server Based
+   - Agent Based (small agents installed on a bunch of systems to scan)
+ - Scan Perspective - Conducting scans from different places on the network
+   - Internal vs Extenral
+   - Services vs Devices
+   - Allows you to see the effects that an attack could have on the network
+     - Firewall
+     - Network Segmentation points
+     - IDs (Intrusion Detection Systems)
+     - IPs (Intrusion Prevention Systems)
+   - PCI DAS (Payment standard) are a good example 
+ - Scanner Maintenence
+   - Verifying Software is up to date
+   - Verifying that threat intellegence is staying up to date
+ - Security Content Automation Protocal (SCAP)
+   - Standard for vulnerability feeds (out dated)
+   - Common Config Enum (CCE) - Common nomenclature for config issues
+   - Common Platform Enum (CPE) - Product and versions
+   - Common Vulnerability and Exposure (CVE) - Software Flaws
+   - Common Vulnerability Scoring System (CVSS) - Measuring and describing the severity
+   - Extensible Config Checklist Description Format (XCCDF) - Checklist and reporting
+   - Open Vulnerability & Assesment (OVAL) - How to determine the vulnerability exists
+ - App Testing
+   - Static (lint or manual review)
+   - Dynamic (tests/looking at outputs)
+   - Interactive (e2e)
+ - Web App Scanning - Looking for vulnerabilities automatically
+   - Looking for:
+     - XSS
+     - SQLi 
+     - CSRF
+ - Common Vulnerability Scoring System (CVSS)
+   - Attack Vector Metric (AV) - How an attacker would exploit the vulnerability
+     - (P)hysical - .2
+     - (L)ocal - .55
+     - (A)djacent - .62
+     - (N)etwork - .85
+   - Attack Complexity (AC) - How an attacker would exploit the vulnerability
+     - (H)igh - .44
+     - (L)ow - .77
+   - Privileges Required (PR)
+     - (H)igh - .27
+     - (N)one - .62
+     - (L)ow - .85
+   - User Interaction (UI) - The need of another to execute the attack
+     - (N)one - .85
+     - (R)equired - .62
+   - Confidentiality (C)
+     - (N)one - 0
+     - (L)ow - .22
+     - (H)igh - .56
+   - Integrity (I)
+     - (N)one - .0
+     - (L)ow - .22
+     - (H)igh - .56
+   - Availability (A)
+     - (N)one - .0
+     - (L)ow - .22
+     - (H)igh - .56
+   - Scope (S) - If the vulnerability extends past the managing Authority
+   - Format is typically like cvss:3.0/AV:x/AC:y/....
+   - Calculation:
+     - ISS = 1-[(1-C)(1-I)(1-A)]
+     - Impact (if scope is unchanged) = 5.42 * ISS
+     - Impact (if scope changed) = 7.52(ISS - .029) - 3.25(ISS-.02)^15
+     - Exploitability = 8.22 * AV * AC * PR * UI
+     - Base Score(BS):
+       - Impact <= 0 ? 0
+       - BS = Impact (scope unchanged) Impact + Exploit
+       - BS = Imapct (scope changed) 1.08(Impact+Exploit)
+       - BS > 10 ? 10
+     - Scoring Threat
+       - 0 - None
+       - <=3.9 - Low
+       - <=6.9 - Med 
+       - <= 8.9 - High
+       - <= 10 - Critical
+ - Confirmation of Scan Results 
+   - False Positives
+   - Positive Report
+   - A report is either positive or negative
+   - Analyst verification can be anywhere from verifying the the update versioning to verifying the SQLi vulnerabilities
+   - Use different sources to verify
+     - Logs
+     - Security Info Event Management (SIEM)
+     - Configuration management Systems
+
+## Vulnerability Classification
+ - Patch Management
+   - Neglected due to lack of resources typically
+   - Automated software to manage this help prevent this
+ - Legacy Systems
+   - Discontinued Support
+   - High Risk for Vulnerabilities
+   - Mitigation via upgrading or isolating the system
+ - Weak Configurations
+   - Default configs
+ - Insecure Protocols 
+   - Telmet
+   - Insecure FTP
+ - Weak Encryption
+   - Algorithmic Weakness
+
+## Pen Testing
+ - Authorized legal attempts to defeat an orginizations security controls
+ - Reason to pen test is that it gives us insights into our vulnerabilities that other testing cant
+ - it gives us knowledge & if successful, gives us a blueprint on our gap
+ - Pentest Types:
+   - Physical
+   - Defensive
+   - Offensive 
+   - Integrated (Defensive/Offensive combined)
+ - Classification:
+   - Known Environment tests
+   - Unknown environment tests
+   - Partially Known
+ - Rules of Engagement (RoE)
+   - Timeline
+   - Locations/systems/apps
+   - Data handling
+   - Expected behaviors
+   - Resources 
+   - Legal Concerns
+   - When and how communicaitons on this process will occur
+ - Reconnaissance - Gathering info phase
+   - Passive Reconnaissance - gathering info w/o directly engaging w/ the target
+   - Active - Direct Engagement
+ - Runing the Test
+   - Phases
+     - Initial Phase
+     - Privilage Escelation
+     - Pivioting/Lateral Movement (access other parts)
+     - Persistence (back door
+     - Presenting the results
+
+## Audits & Assesments
+ - Security Tests - Verify a control is functioning properly
+ - Review Considerations
+   - Availability of test resources
+   - Criticality
+   - Sensitivity
+   - Liklihood of techinical failure
+   - Misconfiguration
+   - Risk
+   - Rate of change of a control
+   - Difficulty & Time
+   - Impact on business operations
+ - Securrity Assesment - Comprehensive Reviews
+ - Security Audits - Security assesment but performed by external Auditors
+ - Internal Audits - Internally assesed 
+ - External
+ - Independant Third-Parties - Regulatory Bodies
+ - Auditing Standards - Defining the review standard
+   - COBIT
+   - ISO27001
+
+## Vulnerability Lifecycle
+ - Identification -> Analysis -> Response & Remediation -> Validation of Remediation -> Reporting
+ - Vulnerability identificaiton
+   - Scans
+   - Pen Tests
+   - Disclosures (Bug Bounty)
+   - Results of Audits
+ - Vulnerability Response and Remediation
+   - Patching
+   - Netowrk Segmentation
+   - Firewalls
+   - Insuracne (reduce financial risk)
+   - Grant Exception
+ - Reporting
+   - Summarizing
+   - Providing Details
+   - Remediation
+   - Highlights
+   - Recommendations
