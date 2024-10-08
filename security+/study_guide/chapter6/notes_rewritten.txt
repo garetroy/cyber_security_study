@@ -1,0 +1,105 @@
+# Applicatoin Security
+
+- Software Development Lifecycle (SDLC)
+ - Planning
+ - Requirements
+ - Design
+ - Coding
+ - Testing
+ - Training
+ - Maintenence
+
+ - DevOps - Goal of optomizing the SDLC
+   - DevSecOps is the security aspect of this
+ - CI - Continus Integration
+
+## Designing Code for Security
+ - Open Worldwide Application Security Project
+   - Define Security Requirements
+   - Leverage Security Frameworks & Services
+   - Secure DB Access
+   - Encode & Escape Data
+   - Validate all inputs
+   - Implement Digital Identities
+   - Enforce Access Controls
+   - Protect Data Everywhere
+   - Logging & Monitoring
+   - Handle All Errors and Exceptions
+ 
+## Software Security Testing
+ - Static Code Analysis - Manual Review
+ - Dynamic Code Analysis - Auto Testing & confirming expected output
+ - Fuzzing - Sending invalid or random data to test the applications handling of unexpected data
+
+## Injection Vulnerabilities
+ - SQL Intection (SQLi)
+ - Blind SQl Injection - When attacker cant see results of the injection
+   - Trying to modify what is displayed such as changing the query to return no results
+ - Blind Timing SQLi - Using elay of time to verify vulnerability
+   - They can use this as a confirmation tool as well
+   - e.x. if X==y delay 10 seconds
+ - Code Injection Attacks (Arbitrairly executed code)
+ - Command Injection
+
+## Authenticaion Vulnerabilities
+ - Password
+   - Social Engineering
+   - Eaves dropping
+   - Password Dumps
+ - Session Attacks
+   - Cookie stealing
+     - MTM
+     - Maleware
+     - Eaves Droping
+ - Unvalidated Redirects
+   - Malicious URLs
+
+## Exploiting Authorization
+ - Insecure Direct Objects references
+   - Modifying post request or URL to do lookups
+   - e.g. .com/doc/1234
+ - Directory Traversal
+   - Typically comes from Misconfiguration
+ - File Inclusion
+   - Executing code/file on the server
+ - Privilege Escelation
+
+## Exploting Web Application Vulnerabilites
+ - XSS
+   - Reflected - when the site reflects back inputs
+   - Stored/Persistent - When the webpage contains XSS
+ - Request Forgery - Exploit trusted relationsships 
+   - Cross-site request forgery (CSRF/XSRF) - Using a user system that is trusted by a site to send a command to the second site
+ - Server Side Forgery (SSRF) - Tricking a server to visit a URL
+
+## Application Security Controls
+ - Input Validaiton & Sanitization
+ - Web Application Firewalls
+ - Paramerterized Queries (Stored Proceedures)
+ - Sandboxing
+ - Code Security
+   - Code Signing
+ - Diversity (no single points of failure)
+ - Repositiories
+ - Application Resilience
+   - Scalability
+ 
+## Secure Coding Practices
+ - Source Code Comments
+ - Error handling
+ - Secrets handling
+ - Package Monitoring
+ - Memory Management
+   - Resource Exhaustion / Memory leaks
+   - Pointer Dereferencing (crashes)
+   - Buffer OVerflow / Memory Injections
+ - Race Conditions
+   - Time of Check (TOC) - Access Verification
+   - Time of Use (TOU) - Access Resources
+   - Target Eval (TOE) - Exploiting x vulnerability
+
+## Automatoin & Orchestration
+ - Security Orchestration, automation & response (SOAR)
+   - Automate Security Tasks
+   - Scripts 
+
