@@ -1,6 +1,6 @@
 #!/bin/sh
 
-result=$(./login.sh 0 bandit0 "grep 'password' readme")
+result=$(python3 login_cached.py 0 bandit0 "grep 'password' readme")
 
 cleaned_result=$(./cleanup.sh "$result")
 
