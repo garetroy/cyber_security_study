@@ -1,0 +1,57 @@
+{
+    "0": {
+        "cmd": "grep 'password' readme | awk '{print $NF}'",
+        "password": "bandit0"
+    },
+    "1": {
+        "cmd": "cat ./-"
+    },
+    "2": {
+        "cmd": "cat spaces*"
+    },
+    "3": {
+        "cmd": "cat inhere/.*"
+    },
+    "4": {
+        "cmd": "grep -L '[^a-zA-Z1-9[:space:]]' ./inhere/* | xargs cat"
+    },
+    "5": {
+        "cmd": "find ./inhere/* -type f -size 1033c | xargs grep -L '[^a-zA-Z0-9[:space:]]' | xargs cat"
+    },
+    "6": {
+        "cmd": "find /* -type f -size 33c -user bandit7 -group bandit6 2>/dev/null | xargs cat"
+    },
+    "7": {
+        "cmd": "grep -Rw millionth data.txt | awk '{print $2}'"
+    },
+    "8": {
+        "cmd": "sort data.txt | uniq -u"
+    },
+    "9": {
+        "cmd": "grep -ao '=\\ [a-zA-Z0-9]\\+' data.txt | tail -n 1 | tr -d '='"
+    },
+    "10": {
+        "cmd": "base64 -d data.txt | awk '{print $4}'"
+    },
+    "11": {
+        "cmd": "cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m' | awk '{print $4}'"
+    },
+    "12": {
+        "cmd": "mkdir -p /tmp/wowz; cp ~/data.txt /tmp/wowz; cd /tmp/wowz; cp data.txt hexdump; xxd -r hexdump compressed_data.gz; gzip -d compressed_data.gz; mv compressed_data compressed_data.bz2; bzip2 -d compressed_data.bz2; mv compressed_data compressed_data.gz; gzip -d compressed_data.gz; mv compressed_data compressed_data.tar; tar -xf compressed_data.tar; tar -xf data5.bin; mv data6.bin data6.bz2; bzip2 -d data6.bz2; tar -xf data6; mv data8.bin data8.gz; gzip -d data8.gz; cat data8 | awk '{print $4}'; cd ~; rm -rf /tmp/wowz;"
+    },
+    "13": {
+        "cmd": "cat sshkey.private"
+    },
+    "14": {
+        "cmd": "cat /etc/bandit_pass/bandit14 | nc localhost 30000 | awk 'NR == 2'"
+    },
+    "15": {
+        "cmd": "echo '8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo' | ncat --ssl localhost 30001 | awk 'NR == 2'"
+    },
+    "16": {
+        "cmd": "mkdir -p /tmp/wow && nmap -p 31000-32000 localhost | tee /tmp/wow/log.log | grep open | awk '{print $1}' | sed 's/\\/tcp//g' | tr '\\n' ',' | sed 's/,$//' | xargs -I{} nmap -p {} --script ssl-enum-ciphers localhost | tee /tmp/wow/ssl_log.log | awk '/ssl-enum-ciphers/ {print prev} {prev=$1}' | sed 's/\\/tcp//g' | tr '\\n' ',' | sed 's/,$//' > /tmp/wow/tls_ports.log && for port in $(cat /tmp/wow/tls_ports.log | tr ',' ' '); do echo 'kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx' | ncat --ssl localhost $port; done | awk 'NR >= 3'; cd ~; rm -rf /tmp/wow"
+    },
+    "17": {
+        "cmd": ""
+    }
+}
