@@ -1,0 +1,9 @@
+- This was tested with 30 questions from each domain from practice question book
+
+D1 - 75%
+D2 - 80%
+D3 - 70%
+D4 - 90%
+D5 - 56.6%
+
+Total: 76.56%
