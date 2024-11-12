@@ -52,6 +52,21 @@
         "cmd": "mkdir -p /tmp/wow && nmap -p 31000-32000 localhost | tee /tmp/wow/log.log | grep open | awk '{print $1}' | sed 's/\\/tcp//g' | tr '\\n' ',' | sed 's/,$//' | xargs -I{} nmap -p {} --script ssl-enum-ciphers localhost | tee /tmp/wow/ssl_log.log | awk '/ssl-enum-ciphers/ {print prev} {prev=$1}' | sed 's/\\/tcp//g' | tr '\\n' ',' | sed 's/,$//' > /tmp/wow/tls_ports.log && for port in $(cat /tmp/wow/tls_ports.log | tr ',' ' '); do echo 'kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx' | ncat --ssl localhost $port; done | awk 'NR >= 3'; cd ~; rm -rf /tmp/wow"
     },
     "17": {
+        "cmd": "diff passwords.old passwords.new | awk 'NR == 4' | awk '{print $2}'"
+    },
+    "18": {
+        "cmd": "cat ./readme"
+    },
+    "19": {
+        "cmd": "./bandit20-do cat /etc/bandit_pass/bandit20"
+    },
+    "20": {
+        "cmd": "(cat /etc/bandit_pass/bandit20 | xargs echo -n | nc -w 5 -l     -p 1234 &); ./suconnect 1234 |  awk 'N == 3' | echo"
+    },
+    "21": {
+        "cmd": "cat /usr/bin/cronjob_bandit22.sh | grep -n '> /tmp'| awk '{print $4}' | xargs cat"
+    },
+    "22": {
         "cmd": ""
     }
 }
