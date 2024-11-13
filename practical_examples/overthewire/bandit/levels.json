@@ -46,10 +46,10 @@
         "cmd": "cat /etc/bandit_pass/bandit14 | nc localhost 30000 | awk 'NR == 2'"
     },
     "15": {
-        "cmd": "echo '8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo' | ncat --ssl localhost 30001 | awk 'NR == 2'"
+        "cmd": "echo '/etc/bandit_pass/bandit15' | ncat --ssl localhost 30001 | awk 'NR == 2'"
     },
     "16": {
-        "cmd": "mkdir -p /tmp/wow && nmap -p 31000-32000 localhost | tee /tmp/wow/log.log | grep open | awk '{print $1}' | sed 's/\\/tcp//g' | tr '\\n' ',' | sed 's/,$//' | xargs -I{} nmap -p {} --script ssl-enum-ciphers localhost | tee /tmp/wow/ssl_log.log | awk '/ssl-enum-ciphers/ {print prev} {prev=$1}' | sed 's/\\/tcp//g' | tr '\\n' ',' | sed 's/,$//' > /tmp/wow/tls_ports.log && for port in $(cat /tmp/wow/tls_ports.log | tr ',' ' '); do echo 'kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx' | ncat --ssl localhost $port; done | awk 'NR >= 3'; cd ~; rm -rf /tmp/wow"
+        "cmd": "mkdir -p /tmp/wow && nmap -p 31000-32000 localhost | tee /tmp/wow/log.log | grep open | awk '{print $1}' | sed 's/\\/tcp//g' | tr '\\n' ',' | sed 's/,$//' | xargs -I{} nmap -p {} --script ssl-enum-ciphers localhost | tee /tmp/wow/ssl_log.log | awk '/ssl-enum-ciphers/ {print prev} {prev=$1}' | sed 's/\\/tcp//g' | tr '\\n' ',' | sed 's/,$//' > /tmp/wow/tls_ports.log && for port in $(cat /tmp/wow/tls_ports.log | tr ',' ' '); do echo '/etc/bandit_pass/bandit16' | ncat --ssl localhost $port; done | awk 'NR >= 3'; cd ~; rm -rf /tmp/wow"
     },
     "17": {
         "cmd": "diff passwords.old passwords.new | awk 'NR == 4' | awk '{print $2}'"
@@ -61,12 +61,21 @@
         "cmd": "./bandit20-do cat /etc/bandit_pass/bandit20"
     },
     "20": {
-        "cmd": "(cat /etc/bandit_pass/bandit20 | xargs echo -n | nc -w 5 -l     -p 1234 &); ./suconnect 1234 |  awk 'N == 3' | echo"
+        "cmd": "(cat /etc/bandit_pass/bandit20 | xargs echo -n | nc -w 5 -l -p 1234 &); ./suconnect 1234 |  awk 'N == 3' | echo"
     },
     "21": {
         "cmd": "cat /usr/bin/cronjob_bandit22.sh | grep -n '> /tmp'| awk '{print $4}' | xargs cat"
     },
     "22": {
-        "cmd": ""
+        "cmd": "echo $(echo I am user bandit23 | md5sum | cut -d ' ' -f 1) | xargs -I {} cat /tmp/{}"
+    },
+    "23": {
+	"cmd": "mkdir -p -m 777 /tmp/wow; echo -e '#!/bin/bash\\ncat /etc/bandit_pass/bandit24 > /tmp/wow/log.log' > /var/spool/bandit24/foo/1.sh; chmod 777 /var/spool/bandit24/foo/1.sh; while [ -e /var/spool/bandit24/foo/1.sh ]; do sleep 60; done; cat /tmp/wow/log.log; rm -rf /tmp/wow;"
+    },
+    "24": {
+	"cmd": "mkdir -p -m 777 /tmp/wow; for i in $(seq -w 0000 9999); do echo \\\"$(cat /etc/bandit_pass/bandit24) $i\\\" >> /tmp/wow/p.txt; done; cat /tmp/wow/p.txt | nc localhost 30002 | grep \\\"The password of user bandit25\\\" | awk '{print $7}'; rm -rf /tmp/wow"
+    },
+    "25": {
+	"cmd": ""
     }
 }
