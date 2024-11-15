@@ -1,3 +1,6 @@
+# These files are badly designed and just me messing around with different
+# implementations. This is not production grade code 
+
 import argparse
 import json
 
