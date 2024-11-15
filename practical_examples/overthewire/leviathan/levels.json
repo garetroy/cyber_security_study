@@ -1,0 +1,14 @@
+{
+    "0": {
+        "password": "leviathan0",
+        "cmd": "grep 'password' ./.backup/bookmarks.html | awk -F'|' '{print $2}' | awk -F'leviathan1 is ' '{print $2}' | awk -F'\"' '{print $1}'"
+    },
+    "1": {
+        "password": "NsN1HwFoyN",
+        "cmd": "ltrace ./check; ./check sex; cat /etc/leviathan_pass/leviathan2"
+    },
+    "2": {
+        "password": "",
+        "cmd": ""
+    }
+}
