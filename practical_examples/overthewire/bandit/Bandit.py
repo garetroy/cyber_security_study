@@ -24,7 +24,8 @@ class Bandit:
 
         cmd = self.json_data.get(level, {}).get("cmd")
         password = self.json_data.get(level, {}).get("password", None)
-        result = BanditLevelGenerator(level).generate_and_run(cmd, password)
+        next_password = self.json_data.get(level, {}).get("next_password", None)
+        result = BanditLevelGenerator(level).generate_and_run(cmd, password, next_password)
         
         if should_print:
             print(result)

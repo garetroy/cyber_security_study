@@ -42,11 +42,14 @@ class BanditLevel{level}(BanditLevel):
         
         return result
 
-    def generate_and_run(self, cmd, password):
+    def generate_and_run(self, cmd, password, next_password=None):
         cache_result = self.cache.get_level_password(self.requested_level)
         if cache_result is None:
-            self.create_script(self.requested_level, cmd, password)
-            cache_result = self.import_and_run_class(self.requested_level)
+            if(next_password is not None):
+                cache_result = next_password
+            else:
+                self.create_script(self.requested_level, cmd, password)
+                cache_result = self.import_and_run_class(self.requested_level)
 
             if cache_result is None or len(cache_result) == 0:
                 raise ValueError(f'No value returned from bandit session - {self.requested_level}')

