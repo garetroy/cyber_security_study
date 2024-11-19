@@ -8,6 +8,10 @@
         "cmd": "ltrace ./check; ./check sex; cat /etc/leviathan_pass/leviathan2"
     },
     "2": {
+        "password": "f0n8h2iWLP",
+        "cmd": "strace ./printfile /etc/leviathan_pass/leviathan3; ln -s /etc/leviathan_pass/leviathan3 test; touch 'test test.txt'; ./printfile 'test test.txt'"
+    },
+    "3": {
         "password": "",
         "cmd": ""
     }
