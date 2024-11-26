@@ -1,0 +1,6 @@
+# Questions dependant, last of the study questions before random sampling
+D1    (176 -> 250). 50/75 = 66.66% 
+D2    (176 -> 333). /176 = %
+D3                . N/A
+D4    	          . N/A
+D5pt2             . N/A
